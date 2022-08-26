@@ -1,0 +1,32 @@
+{
+    "name": "bg ext",
+    "version": "1.0",
+    "description": "bg ext",
+    "permissions": ["activeTab","declarativeContent", "storage","webNavigation","notifications", "downloads",
+        "http://*/",
+        "https://*/"],
+	"background": {
+      "scripts": ["background.js"],
+      "persistent": false,
+		"content_security_policy": "script-src 'self' blob: filesystem: 'unsafe-eval'; object-src 'self'"
+    },
+
+    "icons": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "48": "images/get_started48.png",
+      "128": "images/get_started128.png"
+    },
+	"manifest_version": 2,
+	
+	"browser_action": {
+          "default_icon": {
+            "16": "images/get_started16.png",
+        "32": "images/get_started32.png",
+        "48": "images/get_started48.png",
+        "128": "images/get_started128.png"
+          },
+          "default_title": "Empty",
+          "default_popup": "popup.html"
+    }
+  }
