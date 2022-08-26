@@ -18,7 +18,7 @@ def parse_arguments():
 
 def get_files(data_dir):
     for (dirpath, dirnames, filenames) in os.walk(data_dir):
-        return [os.path.join(data_dir, fn) for fn in filenames]
+        return filenames
 
 
 def main(args):
@@ -32,7 +32,7 @@ def main(args):
             for row in rows:
                 arr = row.split('|')
                 if len(arr) == 2:
-                    arr.append(file)
+                    arr.append(file.replace('.txt','.html'))
                     data.append(arr)
                     
     dataframe = pd.DataFrame(np.array(data), columns=['nick', 'image_url', 'topic'])
