@@ -1,8 +1,8 @@
 {
-    "name": "bg ext",
+    "name": "yaplakal.com chtome extension",
     "version": "1.0",
-    "description": "bg ext",
-    "permissions": ["activeTab","declarativeContent", "storage","webNavigation","notifications", "downloads",
+    "description": "yaplakal.com chtome extension",
+    "permissions": ["activeTab","declarativeContent", "storage","webNavigation","notifications", "downloads", "tabs",
         "http://*/",
         "https://*/"],
 	"background": {
