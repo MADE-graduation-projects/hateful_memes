@@ -10,7 +10,7 @@ def get_features(model, dataset):
     all_labels = []
     
     with torch.no_grad():
-        for images, texts, labels in tqdm(DataLoader(dataset, batch_size=100)):
+        for images, texts, labels, path in tqdm(DataLoader(dataset, batch_size=100)):
             
             image_input = torch.tensor(np.stack(images)).cuda()
             text_tokens = clip.tokenize([desc[:77] for desc in texts]).cuda()

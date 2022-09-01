@@ -2,6 +2,8 @@ import torch
 import json
 import os
 from PIL import Image
+import cv2
+from cv2 import cv2
 
 
 class HatefulMemesDataset(torch.utils.data.Dataset):
@@ -11,7 +13,11 @@ class HatefulMemesDataset(torch.utils.data.Dataset):
         self.transforms = transforms
             
     def __getitem__(self, index: int):
-        image = Image.open(os.path.join(self.data_dir, self.data[index]["img"]))        
+        #image = Image.open(os.path.join(self.data_dir, self.data[index]["img"]))   
+        
+        path = os.path.join(self.data_dir, self.data[index]["img"])
+        image = cv2.imread(path)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         
         text = self.data[index]["text"]
         label = self.data[index]["label"]
@@ -19,7 +25,7 @@ class HatefulMemesDataset(torch.utils.data.Dataset):
         if self.transforms is not None:
             image = self.transforms(image)
             
-        return image, text, label
+        return image, text, label, path
     
     def __len__(self):
         return len(self.data)
