@@ -18,6 +18,6 @@
    python create-dataframe.py /files
    ```
    
-1. В результате получается .scv файл
+1. В результате получается .csv файл
 
 ![images](images/images.png)
