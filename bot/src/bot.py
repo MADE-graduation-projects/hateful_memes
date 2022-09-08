@@ -9,9 +9,7 @@ img_id = None
 
 
 def get_next_image(bot, message, images, user_id):
-    images = get_unique_images_from_db(user_id)
     img = images.pop()
-
     img_id, img_uri = img[0], img[1]
     bot.send_chat_action(message.from_user.id, "upload_photo")
     bot.send_photo(message.from_user.id, Image.open(img_uri))
