@@ -13,11 +13,11 @@
  [[[81, 2, 441, 43], 'when you"re feeling [orty', 0.1467968358049227], [[27, 41, 539, 79], 'asilbugou (abibi[s 0. [erfods llets (yagoad', 0.15825469926049332]]
  ```
  3. Затираем область с тестом и создаем файл с маской текста. Файлы сохраняются в папке `img_mask_3px`
-![images](images/1/01235.png) -> ![images](images/1/01235_2.png) + ![images](images/1/01235.mask.png)
+![images](images/1.3/01235.png =100x100) -> ![images](images/1.3/01235_2.png =100x100) + ![images](images/1.3/01235.mask.png =100x100)
 
  4. С помощью DeepFillV2 из модулей mmcv и mmedit удаляем надписи. Результат сохраняется в папку `img_clean`
  
- ![images](images/2/01235.png)
+ ![images](images/2/01235.png =100x100)
  
 ## 2. Поиск объектов на изображении
 
@@ -39,3 +39,6 @@
   'class_id': 161},]
 ```
 ## 3. Разделение изображений представленных комиксом на отдельные картинки
+
+С помощью Res2Net Patch Detector делим изображение. Создается файл `split_img_clean_boxes.json`. Файлы сохраняются в папке `split_img_clean`
+![images](images/3/01576.png =100x100) -> ![images](images/3/01576.0.png =100x100) + ![images](images/3/01576.1.png =100x100)
