@@ -8,10 +8,14 @@
  
  ([[27, 41], [539, 41], [539, 79], [27, 79]], 'asilbugou (abibi[s 0. [erfods llets (yagoad', 0.15825469926049332)])
  ```
+ 
+ 
  2. Пересохраняем файл в другом формате, создается файл `ocr.box.json`
  ```
  [[[81, 2, 441, 43], 'when you"re feeling [orty', 0.1467968358049227], [[27, 41, 539, 79], 'asilbugou (abibi[s 0. [erfods llets (yagoad', 0.15825469926049332]]
  ```
+ 
+ 
  3. Затираем область с тестом и создаем файл с маской текста. Файлы сохраняются в папке `img_mask_3px`
 
 <picture>
@@ -21,8 +25,10 @@
   <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task13_data_preprocessing/competitions/HimariO/1_prepare_data/images/1.3/01235_2.png"  width="300" height="300">
 </picture> +
 <picture>
-  <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task13_data_preprocessing/competitions/HimariO/1_prepare_data/images/1.3/01235.mask..png"  width="300" height="300">
+  <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task13_data_preprocessing/competitions/HimariO/1_prepare_data/images/1.3/01235.mask.png"  width="300" height="300">
 </picture>
+
+
 
 
  4. С помощью DeepFillV2 из модулей mmcv и mmedit удаляем надписи. Результат сохраняется в папку `img_clean`
@@ -30,6 +36,7 @@
 <picture>
   <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task13_data_preprocessing/competitions/HimariO/1_prepare_data/images/2/01235.png"  width="300" height="300">
 </picture>
+
 
 
 ## 2. Поиск объектов на изображении
@@ -51,6 +58,9 @@
   'class_name': 'Hat',
   'class_id': 161},]
 ```
+
+
+
 ## 3. Разделение изображений представленных комиксом на отдельные картинки
 
 С помощью Res2Net Patch Detector делим изображение. Создается файл `split_img_clean_boxes.json`. Файлы сохраняются в папке `split_img_clean`
