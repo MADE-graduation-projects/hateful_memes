@@ -34,7 +34,7 @@
  4. С помощью DeepFillV2 из модулей mmcv и mmedit удаляем надписи. Результат сохраняется в папку `img_clean`
  
 <picture>
-  <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task13_data_preprocessing/competitions/HimariO/1_prepare_data/images/2/01235.png"  width="300" height="300">
+  <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task13_data_preprocessing/competitions/HimariO/1_prepare_data/images/1.4/01235.png"  width="300" height="300">
 </picture>
 
 
@@ -58,7 +58,9 @@
   'class_name': 'Hat',
   'class_id': 161},]
 ```
-
+<picture>
+  <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task13_data_preprocessing/competitions/HimariO/1_prepare_data/images/2/01235.png"  width="300" height="300">
+</picture>
 
 
 ## 3. Разделение изображений представленных комиксом на отдельные картинки
