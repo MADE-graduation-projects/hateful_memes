@@ -41,4 +41,13 @@
 ## 3. Разделение изображений представленных комиксом на отдельные картинки
 
 С помощью Res2Net Patch Detector делим изображение. Создается файл `split_img_clean_boxes.json`. Файлы сохраняются в папке `split_img_clean`
-![images](images/3/01576.png =100x100) -> ![images](images/3/01576.0.png =100x100) + ![images](images/3/01576.1.png =100x100)
+
+<picture>
+  <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task13_data_preprocessing/competitions/HimariO/1_prepare_data/images/3/01576.png"  width="50" height="50">
+</picture> -> 
+<picture>
+  <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task13_data_preprocessing/competitions/HimariO/1_prepare_data/images/3/01576.0.png"  width="50" height="50">
+</picture> +
+<picture>
+  <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task13_data_preprocessing/competitions/HimariO/1_prepare_data/images/3/01576.1.png"  width="50" height="50">
+</picture>
