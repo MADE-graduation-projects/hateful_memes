@@ -54,8 +54,9 @@ if __name__ == "__main__":
 
         user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
         user_markup.row("/go", "/help", "/stop")
-        user_markup.row("не мем", "уже было")
-        user_markup.row("токсик", "не токсик")
+        user_markup.row("не токсик", "не мем", "уже было", "пропустить")
+        user_markup.row("насилие", "ксенофобия", "алко-нарко", "мизогиния")
+        user_markup.row("суицид", "порно", "токсик текст", "токсик (иное)")
         bot.send_message(
             message.from_user.id,
             """Привет, го размечать смешные картинки!
@@ -139,7 +140,7 @@ if __name__ == "__main__":
             get_reaction(img_id, user_id, react)
             bot.send_message(message.from_user.id, "понял, такое уже было(")
 
-        if message.text == "токсик":
+        if message.text == "токсик (иное)":
             react = 1
             get_reaction(img_id, user_id, react)
             bot.send_message(message.from_user.id, "понял, это токсичный мем(")
@@ -148,6 +149,48 @@ if __name__ == "__main__":
             react = 0
             get_reaction(img_id, user_id, react)
             bot.send_message(message.from_user.id, "понял, это хорошие мем)")
+
+        if message.text == "насилие":
+            react = 4
+            get_reaction(img_id, user_id, react)
+            bot.send_message(message.from_user.id,
+                             "понял, тут какая-то жесть()")
+
+        if message.text == "ксенофобия":
+            react = 5
+            get_reaction(img_id, user_id, react)
+            bot.send_message(message.from_user.id,
+                             "понял, тут разжигают ненависть(")
+
+        if message.text == "алко-нарко":
+            react = 6
+            get_reaction(img_id, user_id, react)
+            bot.send_message(message.from_user.id,
+                             "понял, тут какие-то вещества(")
+
+        if message.text == "мизогиния":
+            react = 7
+            get_reaction(img_id, user_id, react)
+            bot.send_message(message.from_user.id,
+                             "понял, тут женоненавистничество(")
+
+        if message.text == "суицид":
+            react = 8
+            get_reaction(img_id, user_id, react)
+            bot.send_message(message.from_user.id,
+                             "понял, тут толкают к суициду(")
+
+        if message.text == "порно":
+            react = 9
+            get_reaction(img_id, user_id, react)
+            bot.send_message(message.from_user.id,
+                             "понял, тут эротика или порно)")
+
+        if message.text == "токсик текстк":
+            react = 10
+            get_reaction(img_id, user_id, react)
+            bot.send_message(message.from_user.id,
+                             "понял, картинка норм, а текст токсичный(")
 
         img_id = get_next_image(bot, message, images, user_id)
 
