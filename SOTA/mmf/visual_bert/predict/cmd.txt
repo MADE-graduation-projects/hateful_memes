@@ -1,1 +1,0 @@
-python mmf/mmf_cli/predict.py config=config.yaml model=visual_bert checkpoint.resume_file=best.ckpt checkpoint.resume_pretrained=False run_type=val dataset=hateful_memes
