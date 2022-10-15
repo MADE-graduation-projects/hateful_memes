@@ -12,10 +12,10 @@ https://arxiv.org/pdf/2005.04790v3.pdf
 
 ## 1. MMF Visual BERT COCO [Инструкция](https://github.com/facebookresearch/mmf/tree/main/projects/hateful_memes)
 
-Модель получилось запустить только в среде google colab [описание](mmf/visual_bert/train/README.md)
+Модель получилось запустить только в среде google colab [описание](mmf/visual_bert/train)
 
 
-Скрипт для запуска предсказания [описание](mmf/visual_bert/predict/README.md)
+Скрипт для запуска предсказания [описание](mmf/visual_bert/predict)
 
 <picture>
   <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task15_mmf_visual_bert/SOTA/images/mmf_visaul_bert_metrics.png?raw=true"  width="250" height="250">
