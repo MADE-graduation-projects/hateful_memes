@@ -141,7 +141,7 @@ dataset_config:
     return_features_info: true
 datasets: hateful_memes
 model: visual_bert
-config: mmf/projects/hateful_memes/configs/visual_bert/from_coco.yaml
+config: config.yaml
 run_type: train_inference
 optimizer:
   type: adam_w
@@ -182,7 +182,7 @@ checkpoint:
   save_git_details: true
   reset:
     all: false
-    optimizer: false
+    optimizer: true
     counts: false
 start_rank: 0
 device_id: 0
