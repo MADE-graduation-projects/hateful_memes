@@ -5,12 +5,12 @@
 
 ## Сравнение различных классификаторов для модели "ViT-L/14" [ноутбук](CLIP/clip_demo.ipynb)
 
-<picture><img src="images/clip_classifiers.png"  width="100%" height="100%"></picture>
+<picture><img src="CLIP/images/clip_classifiers.png"  width="100%" height="100%"></picture>
 
 
 ## Сравнение различных версий CLIP [ноутбук](CLIP/clip_compare_demo.ipynb)
 
-<picture><img src="images/clip_models.png"  width="100%" height="100%"></picture>
+<picture><img src="CLIP/images/clip_models.png"  width="100%" height="100%"></picture>
 
 
 
@@ -18,7 +18,9 @@
 # SOTA подходы
 
 Цель - воспроизвети подходы из статьи facebook
+
 https://ai.facebook.com/blog/hateful-memes-challenge-and-data-set/
+
 https://arxiv.org/pdf/2005.04790v3.pdf
 
 <picture>
@@ -29,10 +31,10 @@ https://arxiv.org/pdf/2005.04790v3.pdf
 
 ## 1. MMF Visual BERT COCO [Инструкция](https://github.com/facebookresearch/mmf/tree/main/projects/hateful_memes)
 
-Модель получилось запустить только в среде google colab [описание](mmf/visual_bert/train)
+Модель получилось запустить только в среде google colab [описание](SOTA/mmf/visual_bert/train)
 
 
-Скрипт для запуска предсказания [описание](mmf/visual_bert/predict)
+Скрипт для запуска предсказания [описание](SOTA/mmf/visual_bert/predict)
 
 <picture>
   <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task15_mmf_visual_bert/SOTA/images/mmf_visaul_bert_metrics.png?raw=true"  width="250" height="250">
@@ -57,7 +59,7 @@ Accuracy: 0.698	ROC AUC: 0.7452
 
 # OCR
 
-## Подбор гиперпараметров для предобработки изображений [ноутбук](ocr_optuna.ipynb)
+## Подбор гиперпараметров для предобработки изображений [ноутбук](OCR/ocr_optuna.ipynb)
 
 Оптимизировали расстояние Левенштейна между оригинальным и распознанным текстом
 ```
@@ -95,36 +97,36 @@ Value: 0.01512
 
 
 
-## Примеры обработанных изображений и распознанного текста [ноутбук](ocr_images.ipynb)
+## Примеры обработанных изображений и распознанного текста [ноутбук](OCR/ocr_images.ipynb)
 
-<picture><img src="images/ocr_image.png"  width="100%" height="100%"></picture>
+<picture><img src="OCR/images/ocr_image.png"  width="100%" height="100%"></picture>
 
-## Добавление распознанного текста в разметку [ноутбук](ocr_predict.ipynb)
+## Добавление распознанного текста в разметку [ноутбук](OCR/ocr_predict.ipynb)
 
-<picture><img src="images/ocr_text.png"  width="100%" height="100%"></picture>
+<picture><img src="OCR/images/ocr_text.png"  width="100%" height="100%"></picture>
 
 
 
 # Использование признаков только из картинок, без текста и с текстом через OCR
 
-### Только картинки, без надпиcей и без текста [ноутбук](../CLIP/clip_image_no_caption.ipynb)
+### Только картинки, без надпиcей и без текста [ноутбук](CLIP+OCR/clip_image_no_caption.ipynb)
 
 Accuracy: 0.582	ROC AUC: 0.618944
 
-### Используем картинки с надписями без текста [ноутбук](../CLIP/clip_image_with_caption.ipynb)
+### Используем картинки с надписями без текста [ноутбук](CLIP+OCR/clip_image_with_caption.ipynb)
 
 Accuracy: 0.7	ROC AUC: 0.776048
 
-### Картинки без надпией + текст из разметки [ноутбук](../CLIP/clip_image_no_caption_text.ipynb)
+### Картинки без надпией + текст из разметки [ноутбук](CLIP+OCR/clip_image_no_caption_text.ipynb)
 
 Accuracy: 0.684	ROC AUC: 0.748976
 
-### Картинки без надпией + текст который распознали с помощью easyocr [ноутбук](../CLIP/clip_image_no_caption_text_ocr_easyocr.ipynb)
+### Картинки без надпией + текст который распознали с помощью easyocr [ноутбук](CLIP+OCR/clip_image_no_caption_text_ocr_easyocr.ipynb)
 
 (Сократил длину строки до 50 вместо 77)
 
 Accuracy: 0.584	ROC AUC: 0.59608
 
-### Картинки без надпией + текст который распознали с помощью pytesseract [ноутбук](../CLIP/clip_image_no_caption_text_ocr_pytesseract.ipynb)
+### Картинки без надпией + текст который распознали с помощью pytesseract [ноутбук](CLIP+OCR/clip_image_no_caption_text_ocr_pytesseract.ipynb)
 
 Accuracy: 0.652	ROC AUC: 0.69752
