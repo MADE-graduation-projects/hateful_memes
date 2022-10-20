@@ -21,19 +21,15 @@ https://arxiv.org/pdf/2005.04790v3.pdf
   <img src="https://github.com/MADE-graduation-projects/hateful_memes/blob/task15_mmf_visual_bert/SOTA/images/mmf_visaul_bert_metrics.png?raw=true"  width="250" height="250">
 </picture>
 
-### 1.1 Использование MMF Visual BERT COCO для извлечения признаков
-
-Качество 
-Accuracy: 0.67
-ROC AUC: 0.719472
-[ноутбук](mmf/visual_bert/feature_extractor/feature_extractor.ipynb)
+### 1.1 Использование MMF Visual BERT COCO для извлечения признаков [ноутбук](mmf/visual_bert/feature_extractor/feature_extractor.ipynb)
+ 
+Accuracy: 0.67	ROC AUC: 0.719472
 
 
-### 1.2 Использование признаков полученных из моделей CLIP И Visual BERT
 
-Качество 
-Accuracy: 0.698
-ROC AUC: 0.7452
-[ноутбук](mmf/visual_bert/feature_extractor/feature_extractor_mmf_clip.ipynb)
+### 1.2 Использование признаков полученных из моделей CLIP И Visual BERT [ноутбук](mmf/visual_bert/feature_extractor/feature_extractor_mmf_clip.ipynb)
+ 
+Accuracy: 0.698	ROC AUC: 0.7452
+
 
 Качество получилось хуже чем при использовании только CLIP (Accuracy: 0.732 ROC AUC: 0.798672) (ViT-L/14)
