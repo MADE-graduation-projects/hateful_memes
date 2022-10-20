@@ -15,22 +15,33 @@
 ```
 
 Результаты:
+
 **easyocr**
+
 без обработки:
+
 Value: 0.058572
 
 Parameters: cv2.threshold(image, thresh=253, maxval=95, cv2.THRESH_BINARY_INV)
+
 Value: 0.040528
 
 **pytesseract**
+
 без обработки:
+
 Value: 0.069892
 
 Parameters: cv2.threshold(image, thresh=253, maxval=158, cv2.THRESH_BINARY)
+
 Value: 0.01512
 
 
 
 ## Примеры обработанных изображений и распознанного текста [ноутбук](ocr_images.ipynb)
 
+<picture><img src="images/ocr_image.png"  width="100%" height="100%"></picture>
+
 ## Добавление распознанного текста в разметку [ноутбук](ocr_predict.ipynb)
+
+<picture><img src="images/ocr_text.png"  width="100%" height="100%"></picture>
