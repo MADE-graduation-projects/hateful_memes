@@ -22,9 +22,9 @@
 
 Value: 0.058572
 
-Parameters: cv2.threshold(image, thresh=253, maxval=95, cv2.THRESH_BINARY_INV)
+Parameters: cv2.threshold(image, thresh=247, maxval=62, cv2.THRESH_BINARY_INV)
 
-Value: 0.040528
+Value: 0.015208
 
 **pytesseract**
 
