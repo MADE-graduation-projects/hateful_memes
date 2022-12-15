@@ -140,3 +140,6 @@ Accuracy: 0.652	ROC AUC: 0.69752
 ## Сравнение результатов для различных уровней шума для модели "ViT-L/14" [ноутбук](CLIP_augment/clip_compare_augment.ipynb)
 
 <picture><img src="CLIP_augment/images/clip_noise.png"  width="50%" height="50%"></picture>
+
+
+#[Эксперименты с русскоязычным датасетом](ru_dataset)
