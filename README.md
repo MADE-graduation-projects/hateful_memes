@@ -130,3 +130,13 @@ Accuracy: 0.584	ROC AUC: 0.59608
 ### Картинки без надпией + текст который распознали с помощью pytesseract [ноутбук](CLIP+OCR/clip_image_no_caption_text_ocr_pytesseract.ipynb)
 
 Accuracy: 0.652	ROC AUC: 0.69752
+
+
+
+# CLIP Augmentation features
+
+При обучении классификатора к признакам добавляется случайный шум
+
+## Сравнение результатов для различных уровней шума для модели "ViT-L/14" [ноутбук](CLIP_augment/clip_compare_augment.ipynb)
+
+<picture><img src="CLIP_augment/images/clip_noise.png"  width="50%" height="50%"></picture>
