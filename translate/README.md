@@ -1,1 +1,1 @@
-# Пример использования моделей [facebook/wmt19-ru-en](wmt19.ipynb) и [Helsinki-NLP/opus-mt-ru-en]((opus.ipynb)) из библиотеки **transformers** для перевода текста  английского на русский язык
+# Пример использования моделей [facebook/wmt19-ru-en](wmt19.ipynb) и [Helsinki-NLP/opus-mt-ru-en](opus.ipynb) из библиотеки **transformers** для перевода текста  английского на русский язык
