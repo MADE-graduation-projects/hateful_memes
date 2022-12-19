@@ -11,7 +11,7 @@ print(os.getenv("API_TOKEN"))
 
 
 url_ocr = 'http://host.docker.internal:8000/upload'
-url_predict = 'http://127.0.0.1:8000/upload' 
+url_predict = 'http://host.docker.internal:8001/upload' 
 
 
 bot = telebot.TeleBot(os.getenv("API_TOKEN"))
