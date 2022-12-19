@@ -2,11 +2,16 @@ import os
 import telebot
 import time
 import requests
+import datetime
+from PIL import Image
+import pickle
 
 
 print(os.getenv("API_TOKEN"))
 
-url = 'http://host.docker.internal:8000/upload'
+
+url_ocr = 'http://host.docker.internal:8000/upload'
+url_predict = 'http://127.0.0.1:8000/upload' 
 
 
 bot = telebot.TeleBot(os.getenv("API_TOKEN"))
@@ -14,35 +19,35 @@ bot = telebot.TeleBot(os.getenv("API_TOKEN"))
 
 @bot.message_handler(commands=["start"])
 def handle_start(message):
-    chat_id = message.from_user.id
-    print(message.text)
-    print(chat_id)
-    #print(message)
-    bot.send_message(message.from_user.id, f"ok")
+    bot.send_message(message.from_user.id, "Отправьте, пожалуйста картинку")
 
 
 @bot.message_handler(content_types=["text", "photo"])
 def handle_photo(message):
-    chat_id = message.from_user.id
-    #print('in', chat_id, message.text)
-    #print(message)
-    #global msg
-    #msg = message
-    if not message.photo is None:
-        #print(len(message.photo))
+    if message.photo is None:
+        bot.send_message(message.from_user.id, "Отправьте, пожалуйста картинку")   
+    else:
         fileID = message.photo[-1].file_id   
         file_info = bot.get_file(fileID)
         
-
-        #print(file_info.file_path)
-        
         downloaded_file = bot.download_file(file_info.file_path)
-        resp = requests.post(url=url, files={'file': downloaded_file})
-        bot.send_message(message.from_user.id, resp.json()['message'])
-    else:
-        bot.send_message(message.from_user.id, "Отправьте, пожалуйста картинку")        
+        filename = datetime.datetime.now().strftime("%d.%m.%Y_%H.%M.%S.%f")
+        with open(f'{filename}.png', 'wb') as f:
+            f.write(downloaded_file)
+        with open(f'{filename}.png', 'rb') as f:
+            resp = requests.post(url=url_ocr, files={'file': f})
+        
+        text = resp.json()['message']
+        img = Image.open(f'{filename}.png')
+        
+        with open(f'{filename}.pkl', 'wb') as f:
+            pickle.dump((img, text), f)
 
-    #print('out', chat_id, message.text)
+        with open(f'{filename}.pkl', 'rb') as f:
+            resp = requests.post(url=url_predict, files={'file': f})
+        result = f'{text}\n{resp.json()["message"]}'
+        
+        bot.send_message(message.from_user.id, result)
     
     
 bot.infinity_polling()
