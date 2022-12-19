@@ -1,0 +1,9 @@
+ftfy==6.0.3
+regex==2022.10.31
+tqdm==4.63.0
+transformers==4.18.0
+Pillow==8.4.0
+fastapi==0.83.0
+uvicorn==0.16.0
+packaging==21.3
+python-multipart==0.0.5
