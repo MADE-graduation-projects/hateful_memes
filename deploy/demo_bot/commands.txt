@@ -1,3 +1,5 @@
 docker build -t demo_bot .
 
-docker run --rm -d -it demo_bot python app.py
+docker run --name demo_bot -d -it demo_bot python app.py
+
+docker start demo_bot
